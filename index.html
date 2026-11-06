@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <title>Assista a este vídeo antes que saia do ar</title>
+  <meta name="description" content="Apresentação confidencial com acesso liberado. Assista ao vídeo até o final antes que saia do ar.">
+  <style>
+    :root{color-scheme:dark;--red:#e50914;--bg:#050505;--panel:#111113;--muted:#a5a5aa;--line:#29292d;--white:#f5f5f6}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    .page{width:min(100% - 32px,540px);margin:28px auto 26px}
+    .confidential{display:flex;justify-content:center;margin-bottom:16px}
+    .badge{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:4px;background:#b50912;color:#fff;font-size:11px;line-height:1.25;letter-spacing:.15px;text-transform:uppercase;box-shadow:0 0 0 1px #f24b53 inset}
+    .badge svg{width:13px;height:13px;flex:none}
+    h1{max-width:510px;margin:0 auto 22px;text-align:center;font-size:36px;line-height:1.12;font-weight:800;letter-spacing:-1px}
+    h1 span{color:var(--red)}
+    .player{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid #321216;border-radius:5px;background:#000;box-shadow:0 7px 24px #26090b44}
+    .player #yt-player{position:absolute;inset:0;width:100%;height:100%;background:#000}.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+    .viewer{display:flex;align-items:center;gap:8px;margin:12px 0 15px;font-size:13px;color:#b9b9bd}
+    .dot{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 8px #e5091466;flex:none}
+    .viewer strong{color:#f4f4f5;font-weight:600}
+    .comments-title{display:flex;align-items:center;gap:8px;margin:0 0 7px;color:#b1b1b6;font-size:11px;text-transform:uppercase;letter-spacing:.25px}
+    .comments{height:274px;overflow-y:auto;background:var(--panel);border:1px solid #242428;border-radius:4px;padding:5px 9px;scrollbar-color:#45454c #111113;scrollbar-width:thin}
+    .comment{display:flex;gap:9px;padding:6px 0;align-items:flex-start}
+    .avatar{width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:9px;font-weight:700;color:#fff;background:#a50d19}
+    .avatar.gray{background:#52535c}.avatar.amber{background:#b66314}
+    .copy{min-width:0;flex:1;font-size:11px;line-height:1.45}
+    .name{font-weight:600;color:#eee;margin-bottom:1px}
+    .message{margin:0;color:#c7c7cb;overflow-wrap:anywhere}
+    .typing{display:flex;align-items:center;gap:6px;padding:7px 0 3px;color:#75757d;font-size:10px}
+    .typing i{display:block;width:3px;height:3px;background:#777;border-radius:50%}
+    .disclosure{margin:9px 0 0;color:#8e8e95;font-size:10px;line-height:1.5}
+    .footer{border-top:1px solid #1c1c20;margin-top:26px;padding:16px 0 0;display:flex;justify-content:center;gap:28px}
+    .footer a{color:#909096;font-size:10px;text-decoration:underline;text-underline-offset:3px}
+    .cta-wrap{display:flex;justify-content:center;margin:20px auto 0}
+    .cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;border-radius:8px;background:#e50914;color:white;text-decoration:none;font-size:16px;font-weight:700;box-shadow:0 4px 14px #e5091440;transition:filter .2s,transform .2s}
+    .cta:hover{filter:brightness(1.12);transform:translateY(-1px)}
+    .fineprint{text-align:center;color:#77777e;font-size:10px;line-height:1.5;margin:9px auto 0;max-width:430px}
+    .notice{position:static;z-index:3;margin:16px auto 0;max-width:620px;padding:10px 14px;border:1px solid #45454a;border-radius:8px;background:#171719f2;color:#dedee1;font-size:11px;line-height:1.4;box-shadow:0 6px 24px #0009}
+    .notice strong{color:#fff}
+    @media(max-width:600px){.page{width:min(100% - 24px,540px);margin:22px auto 20px}.badge{font-size:10px}h1{font-size:clamp(27px,8vw,35px);margin-bottom:18px;letter-spacing:-.7px}.comments{height:260px}.notice{font-size:10px}}
+    @media(min-width:900px){.page{margin-top:28px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="confidential"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.3 3.9-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.1l-8-14a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></svg>Apresentação Confidencial — Acesso Liberado</span></div>
+    <h1>Assista a este vídeo até o final antes que <span>saia do ar</span>.</h1>
+    <section class="player" aria-label="Vídeo de apresentação">
+      <div id="yt-player" title="Apresentação em vídeo"></div>
+    </section>
+    <div class="viewer"><span class="dot" aria-hidden="true"></span><span><strong>1.454 pessoas</strong> estão assistindo a este vídeo agora</span></div>
+    <section aria-labelledby="comments-heading">
+      <h2 class="comments-title" id="comments-heading"><span class="dot" aria-hidden="true"></span>Comentários ao Vivo</h2>
+      <div class="comments" role="log" aria-live="off">
+        <article class="comment"><div class="avatar">MS</div><div class="copy"><div class="name">Marcos Silva</div><p class="message">gente que coincidência achei esse vídeo, justo hoje que minha conta tava no vermelho</p></div></article>
+        <article class="comment"><div class="avatar gray">AL</div><div class="copy"><div class="name">Ana Lúcia</div><p class="message">será que isso funciona mesmo? já gastei tanta grana com curso de mentalização e nada mudou...</p></div></article>
+        <article class="comment"><div class="avatar amber">CE</div><div class="copy"><div class="name">Carlos_Edu</div><p class="message">@Ana Lúcia mano eu tbm não botava fé, apliquei uns 4 dias e recebi um dinheiro que tava perdido lá de 2021</p></div></article>
+        <article class="comment"><div class="avatar amber">SM</div><div class="copy"><div class="name">Sônia Maria</div><p class="message">isso aqui bate com tudo que minha avó falava sobre abrir caminho pro dinheiro</p></div></article>
+        <article class="comment"><div class="avatar amber">RM</div><div class="copy"><div class="name">Ricardo M.</div><p class="message">se for o que tô pensando, vai mudar muita coisa na minha vida financeira</p></div></article>
+        <article class="comment"><div class="avatar">FG</div><div class="copy"><div class="name">Felipe G</div><p class="message">esse começo já desmontou minha crença de que dinheiro é difícil de chegar</p></div></article>
+        <article class="comment"><div class="avatar amber">JP</div><div class="copy"><div class="name">João Pedro</div><p class="message">alguém sabe se precisa comprar material caro pra fazer isso?</p></div></article>
+        <article class="comment"><div class="avatar">LC</div><div class="copy"><div class="name">Luciana Costa</div><p class="message">@João Pedro ele já falou que é só papel e caneta, eu faço antes de dormir e começou a vir oportunidade de renda extra</p></div></article>
+        <article class="comment"><div class="avatar">MA</div><div class="copy"><div class="name">Maria_Aparecida</div><p class="message">tô anotando tudo, vou aplicar ainda hoje</p></div></article>
+        <article class="comment"><div class="avatar amber">BT</div><div class="copy"><div class="name">Bruno T.</div><p class="message">cheguei agora, perdi o começo? alguém resume o que já passou</p></div></article>
+        <article class="comment"><div class="avatar">PA</div><div class="copy"><div class="name">Patrícia Alves</div><p class="message">@Bruno T. ele explicou como a gente sabota a própria abundância sem perceber, volta uns minutinhos</p></div></article>
+        <div class="typing" aria-hidden="true"><i></i><i></i><i></i><span>alguém está digitando...</span></div>
+      </div>
+      <p class="disclosure">Prévia estática: a contagem e os comentários acima reproduzem o que foi observado na página de referência; não são atualizados nem tiveram sua autenticidade verificada.</p>
+    </section>
+    <div class="cta-wrap"><a class="cta" href="https://lastlink.com/p/CFEEC476F/checkout-payment/?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener noreferrer">Comprar agora</a></div>
+    <p class="fineprint">O botão abre o checkout externo da Lastlink. Confira preço, moeda e condições diretamente na página antes de concluir qualquer compra.</p>
+    <footer class="footer"><a href="#" aria-label="Termos de Uso (endereço não disponibilizado na referência)">Termos de Uso</a><a href="#" aria-label="Políticas de Privacidade (endereço não disponibilizado na referência)">Políticas de Privacidade</a></footer>
+  </main>
+  <aside class="notice" role="note"><strong>Prévia:</strong> o vídeo do YouTube tenta iniciar automaticamente sem som e sem controles visíveis. A reprodução automática pode ser limitada pelo navegador. O contador e os comentários são estáticos e não tiveram sua autenticidade verificada.</aside>
+  <script>
+    // YouTube exige interação do visitante em alguns contextos; por isso tentamos iniciar silenciado.
+    var ytPlayer;
+    function onYouTubeIframeAPIReady() {
+      ytPlayer = new YT.Player('yt-player', {
+        width: '100%',
+        height: '100%',
+        videoId: 'Pt8cXj5a1Zw',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          playsinline: 1,
+          rel: 0,
+          iv_load_policy: 3
+        },
+        events: {
+          onReady: function (event) {
+            event.target.mute();
+            event.target.playVideo();
+          }
+        }
+      });
+    }
+    (function () {
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      tag.async = true;
+      document.head.appendChild(tag);
+    })();
+  </script>
+  </body>
+</html>
